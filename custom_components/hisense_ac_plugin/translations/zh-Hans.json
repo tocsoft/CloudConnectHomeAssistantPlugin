@@ -1,0 +1,42 @@
+{
+    "title": "海信空调",
+    "config": {
+        "step": {
+            "user": {
+                "title": "连接到海信空调",
+                "description": "您即将将您的海信空调（{app_name}）连接到 Home Assistant。\n\n应用程序 ID：{app_id}\n\n请确保您的 Home Assistant 实例可以通过以下地址访问：\n{oauth_callback_url}\n\n点击提交开始认证流程。",
+                "data": {
+                    "confirm_auth": "是的，我要开始认证"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "设备已经配置",
+            "single_instance_allowed": "已配置。仅允许单个实例。",
+            "authorize_url_fail": "生成授权 URL 时出错。",
+            "missing_configuration": "组件未配置。请按照文档进行配置。",
+            "no_url_available": "无可用的 URL。有关此错误的信息，[请查看帮助部分]({docs_url})",
+            "oauth_error": "收到无效的令牌数据。"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "海信空调选项",
+                "description": "{message}",
+                "data": {
+                    "refresh_devices": "刷新设备列表",
+                    "refresh_token": "刷新认证令牌"
+                }
+            }
+        },
+        "error": {
+            "refresh_failed": "刷新设备列表失败",
+            "token_refresh_failed": "刷新令牌失败"
+        },
+        "success": {
+            "device_list_refreshed": "设备列表已刷新",
+            "token_refreshed": "令牌已刷新"
+        }
+    }
+}
