@@ -1,18 +1,18 @@
 {
     "domain": "hisense_ac_plugin",
     "name": "Hisense Air Conditioner",
-    "config_flow": true,
-    "documentation": "https://github.com/Connectlife-LLC/HomeAssistantPlugin/blob/main/README.md",
-    "requirements": [],
-    "ssdp": [],
-    "zeroconf": [],
-    "homekit": {},
-    "dependencies": [],
     "codeowners": [
         "@Hisense"
     ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/Connectlife-LLC/HomeAssistantPlugin/blob/main/README.md",
+    "homekit": {},
+    "integration_type": "hub",
     "iot_class": "cloud_polling",
     "issue_tracker": "https://github.com/Connectlife-LLC/HomeAssistantPlugin/issues",
+    "requirements": [],
+    "ssdp": [],
     "version": "1.0.0",
-    "integration_type": "hub"
+    "zeroconf": []
 }
