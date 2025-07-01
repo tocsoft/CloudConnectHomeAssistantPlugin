@@ -5,10 +5,12 @@ import logging
 import time
 from typing import Any
 
+import voluptuous as vol
+
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers import config_entry_oauth2_flow
+from homeassistant.helpers import config_entry_oauth2_flow, config_validation as cv
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
@@ -20,7 +22,11 @@ from .config_flow import OAuth2FlowHandler
 
 _LOGGER = logging.getLogger(__name__)
 
+# This integration can only be configured via config entry
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
 PLATFORMS: list[Platform] = [Platform.CLIMATE, Platform.SWITCH, Platform.WATER_HEATER, Platform.NUMBER, Platform.SENSOR, Platform.HUMIDIFIER]
+
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the Hisense AC Plugin component."""
     _LOGGER.debug("Setting up Hisense AC Plugin")

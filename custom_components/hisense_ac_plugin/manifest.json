@@ -14,15 +14,5 @@
     "iot_class": "cloud_polling",
     "issue_tracker": "https://github.com/Connectlife-LLC/HomeAssistantPlugin/issues",
     "version": "1.0.0",
-    "integration_type": "hub",
-    "translations": [
-        {
-            "locale": "en",
-            "path": "strings.json"
-        },
-        {
-            "locale": "zh-Hans",
-            "path": "translations/zh-Hans.json"
-        }
-    ]
+    "integration_type": "hub"
 }
