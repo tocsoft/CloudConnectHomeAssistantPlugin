@@ -10,6 +10,8 @@ jobs:
   hacs:
     name: HACS Action
     runs-on: "ubuntu-latest"
+    permissions:
+      contents: read
     steps:
       - name: HACS Action
         uses: "hacs/action@main"
