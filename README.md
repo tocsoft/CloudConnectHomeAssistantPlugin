@@ -7,7 +7,8 @@
 
 **English** | [中文](README_zh.md)
 
-This integration allows you to control Hisense smart home devices through Home Assistant using the ConnectLife cloud service.
+This integration allows you to control Hisense smart home devices through Home Assistant using the ConnectLife cloud
+service.
 
 ## Features
 
@@ -21,14 +22,14 @@ This integration allows you to control Hisense smart home devices through Home A
 
 ## Supported Devices
 
-| Device Type | Models | Features |
-|-------------|--------|----------|
-| **Split Air Conditioners** | 009-199 series | Full climate control, energy monitoring |
-| **Window Air Conditioners** | 008-399 series | Climate control, basic sensors |
-| **Portable Air Conditioners** | 006-299 series | Climate control, mobility features |
-| **Dehumidifiers** | 007 series | Humidity control, fan speed management |
-| **Heat Pumps** | 035-699 series | Heating/cooling, water heating |
-| **Ducted Systems** | Various | Zone control, advanced climate management |
+| Device Type                   | Models         | Features                                  |
+|-------------------------------|----------------|-------------------------------------------|
+| **Split Air Conditioners**    | 009-199 series | Full climate control, energy monitoring   |
+| **Window Air Conditioners**   | 008-399 series | Climate control, basic sensors            |
+| **Portable Air Conditioners** | 006-299 series | Climate control, mobility features        |
+| **Dehumidifiers**             | 007 series     | Humidity control, fan speed management    |
+| **Heat Pumps**                | 035-699 series | Heating/cooling, water heating            |
+| **Ducted Systems**            | Various        | Zone control, advanced climate management |
 
 ## Installation
 
@@ -83,7 +84,8 @@ For proper OAuth2 authentication, you need to configure local DNS resolution:
 2. Complete the OAuth2 authorization process
 3. Wait for device discovery to complete
 
-**Important**: 
+**Important**:
+
 - Disable VPN/proxy services during setup
 - Ensure your ConnectLife account has devices registered
 - The initial sync may take 1-2 minutes
@@ -126,43 +128,55 @@ For multi-zone systems, individual zone switches are created:
 
 ## Entity Types
 
-| Platform | Description | Example Entities |
-|----------|-------------|------------------|
-| **Climate** | AC units, heat pumps | `climate.living_room_ac` |
-| **Sensor** | Temperature, humidity, energy | `sensor.bedroom_temperature` |
-| **Switch** | Zones, special functions | `switch.turbo_mode` |
-| **Number** | Target values, settings | `number.display_brightness` |
-| **Humidifier** | Dehumidifier control | `humidifier.basement_dehumidifier` |
-| **Water Heater** | Hot water systems | `water_heater.main_unit` |
+| Platform         | Description                   | Example Entities                   |
+|------------------|-------------------------------|------------------------------------|
+| **Climate**      | AC units, heat pumps          | `climate.living_room_ac`           |
+| **Sensor**       | Temperature, humidity, energy | `sensor.bedroom_temperature`       |
+| **Switch**       | Zones, special functions      | `switch.turbo_mode`                |
+| **Number**       | Target values, settings       | `number.display_brightness`        |
+| **Humidifier**   | Dehumidifier control          | `humidifier.basement_dehumidifier` |
+| **Water Heater** | Hot water systems             | `water_heater.main_unit`           |
 
 ## Troubleshooting
 
 ### Common Issues
 
 #### Authentication Failed
-**Symptoms**: Login fails or shows "Invalid credentials"
-**Solutions**:
+
+**Symptom**: Login fails or shows "Invalid credentials"
+
+**Solution**:
+
 - Verify your ConnectLife username and password
 - Ensure 2FA is disabled temporarily during setup
 - Try logging into the ConnectLife app to verify credentials
 
 #### Device Not Found
-**Symptoms**: No devices appear after setup
-**Solutions**:
+
+**Symptom**: No devices appear after setup
+
+**Solution**:
+
 - Verify devices are online in the ConnectLife app
 - Check internet connectivity
 - Restart the integration from **Settings** → **Devices & Services**
 
 #### OAuth2 Redirect Error
-**Symptoms**: "Page not found" after login
-**Solutions**:
+
+**Symptom**: "Page not found" after login
+
+**Solution**:
+
 - Ensure the hosts file modification was completed correctly
 - Restart your browser
 - Disable VPN/proxy services
 
 #### Connection Timeout
-**Symptoms**: Integration shows "Unavailable" status
-**Solutions**:
+
+**Symptom**: Integration shows "Unavailable" status
+
+**Solution**:
+
 - Check Home Assistant logs for specific error messages
 - Verify ConnectLife service status
 - Restart Home Assistant
@@ -183,14 +197,10 @@ logger:
 1. Check the [Troubleshooting Wiki][wiki]
 2. Search existing [GitHub Issues][issues]
 3. Create a new issue with:
-   - Home Assistant version
-   - Integration version
-   - Device model
-   - Error logs (with sensitive data removed)
-
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
+    - Home Assistant version
+    - Integration version
+    - Device model
+    - Error logs (with sensitive data removed)
 
 ### Development Setup
 
@@ -206,7 +216,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Disclaimer
 
-This integration is not officially affiliated with Hisense. It uses the ConnectLife cloud API for device communication. Use at your own risk.
+This integration is not officially affiliated with Hisense. It uses the ConnectLife cloud API for device communication.
+Use at your own risk.
 
 ## Support
 
@@ -219,14 +230,21 @@ This integration is not officially affiliated with Hisense. It uses the ConnectL
 **Made with ❤️ for the Home Assistant community**
 
 [releases-shield]: https://img.shields.io/github/release/Connectlife-LLC/HomeAssistantPlugin.svg?style=for-the-badge
+
 [releases]: https://github.com/Connectlife-LLC/HomeAssistantPlugin/releases
+
 [commits-shield]: https://img.shields.io/github/commit-activity/y/Connectlife-LLC/HomeAssistantPlugin.svg?style=for-the-badge
+
 [commits]: https://github.com/Connectlife-LLC/HomeAssistantPlugin/commits/main
+
 [license-shield]: https://img.shields.io/github/license/Connectlife-LLC/HomeAssistantPlugin.svg?style=for-the-badge
+
 [hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
+
 [hacs]: https://github.com/hacs/integration
+
 [issues]: https://github.com/Connectlife-LLC/HomeAssistantPlugin/issues
+
 [discussions]: https://github.com/Connectlife-LLC/HomeAssistantPlugin/discussions
+
 [wiki]: https://github.com/Connectlife-LLC/HomeAssistantPlugin/wiki
-
-
