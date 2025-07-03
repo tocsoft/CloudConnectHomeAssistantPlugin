@@ -40,7 +40,7 @@ class HisenseOptionsFlowHandler(OptionsFlow):
                     coordinator._devices = devices
                     # 强制更新一次状态
                     await coordinator.async_refresh()
-                    description_placeholders["message"] = "success.device_list_refreshed"
+                    description_placeholders["message"] = "Device list has been refreshed"
                 except Exception as err:
                     _LOGGER.error("Failed to refresh device list: %s", err)
                     errors["base"] = "refresh_failed"
@@ -69,7 +69,7 @@ class HisenseOptionsFlowHandler(OptionsFlow):
                             data={**self.config_entry.data, "token": new_token}
                         )
                         _LOGGER.info("Token refreshed successfully")
-                        description_placeholders["message"] = "success.token_refreshed"
+                        description_placeholders["message"] = "Token has been refreshed"
                     else:
                         _LOGGER.warning("No new token received after refresh")
                         errors["base"] = "token_refresh_failed"
