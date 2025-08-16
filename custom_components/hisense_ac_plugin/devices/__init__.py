@@ -32,7 +32,7 @@ def get_device_parser(device_type: str , feature_code: str) -> Type[BaseDevicePa
         _LOGGER.debug("除湿机设备 %s", device_type)
         return Humidity007Parser
     # 预设的设备类型集合
-    supported_device_types = ["009", "008", "006", "016"]
+    supported_device_types = ["009", "008", "006", "016", "025"]
     if device_type in supported_device_types:
         parser_class = BaseBeanParser
         _LOGGER.debug("Using default parser for device type %s", device_type)
