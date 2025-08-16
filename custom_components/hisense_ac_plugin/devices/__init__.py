@@ -9,6 +9,7 @@ from .hum_007 import Humidity007Parser
 from .split_ac_009_199 import SplitAC009199Parser
 from .window_ac_008_399 import WindowAC008399Parser
 from .bean_006_299 import Split006299Parser
+from .wash_m_025 import HisenseWashingMachineParser
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -17,6 +18,7 @@ DEVICE_PARSERS: Dict[tuple[str, str], Type[BaseDeviceParser]] = {
     ("035", "699"): SplitWater035699Parser,
     ("006", "299"): Split006299Parser,
     ("007", ""): Humidity007Parser,
+    ("025", ""): HisenseWashingMachineParser,
 }
 
 
